@@ -1,0 +1,51 @@
+{
+  "name": "livesplit_analyzer_webapp",
+  "version": "1.0.0",
+  "description": "webapp for livesplit analyzer project",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --ext=ts,tsx src",
+    "lint-fix": "eslint --ext=ts,tsx --fix src",
+    "bench": "webpack-dev-server --hot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Asherza/livesplit_analyzer_webapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Asherza/livesplit_analyzer_webapp/issues"
+  },
+  "homepage": "https://github.com/Asherza/livesplit_analyzer_webapp#readme",
+  "dependencies": {
+    "@hot-loader/react-dom": "^16.10.2",
+    "@types/node": "^14.6.2",
+    "@types/react": "^16.9.49",
+    "@types/react-dom": "^16.9.8",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-hot-loader": "^4.12.21"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.5",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-decorators": "^7.10.5",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@typescript-eslint/parser": "^4.0.1",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.1.0",
+    "eslint": "^7.7.0",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.0",
+    "fork-ts-checker-webpack-plugin": "^5.1.0",
+    "html-webpack-plugin": "^4.4.1",
+    "typescript": "^4.0.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

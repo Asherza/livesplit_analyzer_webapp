@@ -1,0 +1,124 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "ignorePatterns": ["./node_modules"],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["react", "react-hooks", "@typescript-eslint"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    // DEFAULT RULES
+    // Enforce use of consistent spacing around arrow operators
+    "arrow-spacing": "error",
+    // Disables brace style rule (Overridden by typescript-eslint)
+    "brace-style": "off",
+    // Enforce use of trailing commas on multiline
+    "comma-dangle": ["error", "always-multiline"],
+    // Enforce consistent comma spacing
+    "comma-spacing": "error",
+    // Forces braces for if/for/do/while statements
+    "curly": "error",
+    // Ensures file ends in a newline character
+    "eol-last": ["error", "always"],
+    // Require use of === and !==
+    "eqeqeq": ["error", "always", { "null": "ignore" }],
+    // Requires a 'for ... in' statement to be filtered by an if statement
+    "guard-for-in": "error",
+    // Enforce a maximum line length
+    "max-len": ["error", { "code": 180 }],
+    // Disables use of caller/callee
+    "no-caller": "error",
+    // Turn on case declarations
+    "no-case-declarations": "off",
+    // Prevents the use of console
+    "no-console": ["error", { "allow": ["time", "timeEnd"] }],
+    // Disables use of eval()
+    "no-eval": "error",
+    // Only allows for js labels to be use in do/for/while/switch statements
+    "no-labels": ["error", { "allowSwitch": true, "allowLoop": true }],
+    // Prevent multiple spaces
+    "no-multi-spaces": "error",
+    // Prevent use of useless spaces
+    "no-multiple-empty-lines": ["error", { "max": 1 }],
+    // Prevents the use of primitive wrapper instances
+    "no-new-wrappers": "error",
+    // Prevent whitespace at the end of lines
+    "no-trailing-spaces": "error",
+    // Prevents unused expressions
+    "no-unused-expressions": "error",
+    // Disables indent checking (Overridden by typescript-eslint)
+    "no-unused-vars": "off",
+    // Prevents use of variables and functions before they are defined
+    "no-use-before-define": "error",
+    // Disables constructor rule (Overridden by typescript-eslint)
+    "no-useless-constructor": "off",
+    // Prevents the use of the var keyword
+    "no-var": "error",
+    // Enforce use of consistent brace spacing
+    "object-curly-spacing": ["error", "always"],
+    // Suggest using const when never reassigned
+    "prefer-const": "error",
+    // Consistent use of double quotes
+    "quotes": "error",
+    // Disable race condition rule
+    "require-atomic-updates": "off",
+    // Disable semicolon rule (Overridden by typescript-eslint)
+    "semi": "off",
+    // Prevents use of spaces before semicolons
+    "semi-spacing": "error",
+    // Forces a whitespace character before comment text
+    "spaced-comment": ["error", "always"],
+
+    // TYPESCRIPT-RULES
+    // Forces 1tbs ruling
+    "@typescript-eslint/brace-style": [
+      "error",
+      "1tbs",
+      { "allowSingleLine": true }
+    ],
+    // Forces PascalCase class names
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "class",
+        "format": ["PascalCase"]
+      }
+    ],
+    // Requires explicit accessibility modifiers on class properties and methods
+    "@typescript-eslint/explicit-member-accessibility": [
+      "error",
+      { "overrides": { "constructors": "no-public" } }
+    ],
+    // 2 space indents
+    "@typescript-eslint/indent": ["error", 2, { "SwitchCase": 1 }],
+    // Prevent explicit type declaration for variables initialized to primitive types
+    "@typescript-eslint/no-inferrable-types": "error",
+    // Replaces ESLint's no-unused-vars with a typescript-compatible version
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      { "vars": "all", "args": "after-used" }
+    ],
+    // Prevents empty constructors (typescript-eslint override)
+    "@typescript-eslint/no-useless-constructor": "error",
+    // Requires use of a semicolon after every statement
+    "@typescript-eslint/semi": [
+      "error",
+      "always",
+      { "omitLastInOneLineBlock": true }
+    ],
+
+    // REACT RULES
+    // Correctly spaces a tag
+    "react/jsx-tag-spacing": [2, { "beforeSelfClosing": "always" }],
+    // Lets ESLint know that JSX counts as using a variable
+    "react/jsx-uses-vars": 1
+  }
+}
