@@ -13,7 +13,12 @@
     "noImplicitThis": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
-    "baseUrl": "src"
+    "baseUrl": "src",
+    "paths": {
+      "components": ["components/index"],
+      "containers": ["containers/index"],
+      "services": ["services/index"]
+    }
   },
   "include": ["./src/**/*"],
   "exclude": ["node_modules"]
