@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "eslint --ext=ts,tsx src",
     "lint-fix": "eslint --ext=ts,tsx --fix src",
-    "bench": "webpack-dev-server --hot"
+    "bench": "webpack-dev-server --hot",
+    "build": "webpack --display-error-details"
   },
   "repository": {
     "type": "git",
@@ -22,9 +23,6 @@
     "@hot-loader/react-dom": "^16.10.2",
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
-    "@types/node": "^14.6.2",
-    "@types/react": "^16.9.49",
-    "@types/react-dom": "^16.9.8",
     "clsx": "^1.1.1",
     "fg-loadcss": "^3.1.0",
     "react": "^16.13.1",
@@ -38,6 +36,9 @@
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
     "@babel/preset-typescript": "^7.10.4",
+    "@types/node": "^14.11.2",
+    "@types/react": "^16.9.49",
+    "@types/react-dom": "^16.9.8",
     "@typescript-eslint/eslint-plugin": "^4.0.1",
     "@typescript-eslint/parser": "^4.0.1",
     "awesome-typescript-loader": "^5.2.1",
@@ -49,6 +50,7 @@
     "fork-ts-checker-webpack-plugin": "^5.1.0",
     "html-webpack-plugin": "^4.4.1",
     "style-loader": "^1.2.1",
+    "tsconfig-paths-webpack-plugin": "^3.3.0",
     "typescript": "^4.0.2",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",

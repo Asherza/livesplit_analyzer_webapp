@@ -2,6 +2,7 @@ const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
+const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 
 module.exports = {
   mode: "development",
@@ -16,6 +17,9 @@ module.exports = {
       "react-dom": "@hot-loader/react-dom",
     },
     extensions: [".ts", ".tsx", ".js", ".jsx"],
+    plugins: [
+      new TsconfigPathsPlugin(),
+    ],
   },
   module: {
     rules: [
