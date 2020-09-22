@@ -13,11 +13,11 @@
     "noImplicitThis": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
-    "baseUrl": "src",
+    "baseUrl": ".",
     "paths": {
-      "components": ["components/index"],
-      "containers": ["containers/index"],
-      "services": ["services/index"]
+      "@components": ["src/components/index"],
+      "@containers": ["src/containers/index"],
+      "@services": ["src/services/index"]
     }
   },
   "include": ["./src/**/*"],
